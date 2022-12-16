@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ynvqeQT5R4dTDNAxIHwRgZ+mp3X8gv9glpcEcD63uFJ4BqHZxXM90rBQ70Gvd5Iw/p0zKi9Q4gUhd7rnEzHBHQ==",
+  "dgSpecHash": "GH58JlHOGpcBwcu2bD7ADLWRAM7W5ftH6nDH4900LPbrVBxDZSZ4V9+S9DRWtmNxfO0BK231RFL52wwvDGYURg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sindauto_Conecta\\Desktop\\Lista-Tarefa\\Lista-Tarefa.csproj",
+  "projectFilePath": "C:\\Users\\Sindauto_Conecta\\Desktop\\ListaDeTarefas\\Lista-Tarefa\\Lista-Tarefa.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sindauto_Conecta\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\Sindauto_Conecta\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",

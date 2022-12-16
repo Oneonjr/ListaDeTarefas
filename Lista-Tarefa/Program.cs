@@ -12,7 +12,12 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddAuthentication("Identiry.Login")
     .AddCookie("Identiry.Login", config => {
         config.Cookie.Name = "Identiry.Login";
+        config.LoginPath = "/Login";
+        config.AccessDeniedPath = "/Home";
+        config.ExpireTimeSpan = TimeSpan.FromHours(1);
     });
+
+builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
@@ -29,11 +34,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
+app.MapRazorPages();
 app.Run();
+

@@ -25,15 +25,15 @@ namespace Lista_Tarefa.Controllers
         {
             if(User.Identity.IsAuthenticated)
             {
-                return Json(new { Msg = "Usuário Já Logado"});
+                return Json(new { Msg = "Usuário Já Logado !"} );
             }
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Logar(string username, string senha)
+        public async Task<IActionResult> Logar(string username, string senha, bool manterlogado)
         {
             //fazendo conexão com o mysql.                                    //passando o local.
-            MySqlConnection mySqlConnection = new MySqlConnection("server=localhost;port=3306;database=listast_bd;uid=root;password=Pass2022*");
+            MySqlConnection mySqlConnection = new MySqlConnection("Digite o local do BD");
             mySqlConnection.OpenAsync();
 
             // criando a função pra cria comandos
@@ -60,7 +60,7 @@ namespace Lista_Tarefa.Controllers
                     await HttpContext.SignInAsync(userPrincial,
                     new AuthenticationProperties
                     {
-                        IsPersistent = false,
+                        IsPersistent = manterlogado,
                         ExpiresUtc = DateTime.Now.AddHours(1)
                     });
 

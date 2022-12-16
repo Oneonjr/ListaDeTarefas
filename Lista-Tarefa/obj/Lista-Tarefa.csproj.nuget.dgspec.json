@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sindauto_Conecta\\Desktop\\Lista-Tarefa\\Lista-Tarefa.csproj": {}
+    "C:\\Users\\Sindauto_Conecta\\Desktop\\ListaDeTarefas\\Lista-Tarefa\\Lista-Tarefa.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sindauto_Conecta\\Desktop\\Lista-Tarefa\\Lista-Tarefa.csproj": {
+    "C:\\Users\\Sindauto_Conecta\\Desktop\\ListaDeTarefas\\Lista-Tarefa\\Lista-Tarefa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sindauto_Conecta\\Desktop\\Lista-Tarefa\\Lista-Tarefa.csproj",
+        "projectUniqueName": "C:\\Users\\Sindauto_Conecta\\Desktop\\ListaDeTarefas\\Lista-Tarefa\\Lista-Tarefa.csproj",
         "projectName": "Lista-Tarefa",
-        "projectPath": "C:\\Users\\Sindauto_Conecta\\Desktop\\Lista-Tarefa\\Lista-Tarefa.csproj",
+        "projectPath": "C:\\Users\\Sindauto_Conecta\\Desktop\\ListaDeTarefas\\Lista-Tarefa\\Lista-Tarefa.csproj",
         "packagesPath": "C:\\Users\\Sindauto_Conecta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sindauto_Conecta\\Desktop\\Lista-Tarefa\\obj\\",
+        "outputPath": "C:\\Users\\Sindauto_Conecta\\Desktop\\ListaDeTarefas\\Lista-Tarefa\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sindauto_Conecta\\AppData\\Roaming\\NuGet\\NuGet.Config"
