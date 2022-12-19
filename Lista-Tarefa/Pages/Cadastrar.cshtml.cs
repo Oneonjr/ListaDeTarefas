@@ -42,7 +42,7 @@ namespace Lista_Tarefa.Pages
         public async Task<IActionResult> OnPostAsync()
         {
                         //fazendo conexão com o mysql.             //passando o local.
-            MySqlConnection mySqlConnection = new MySqlConnection("Digite o local do BD");
+            MySqlConnection mySqlConnection = new MySqlConnection("");
             mySqlConnection.OpenAsync();
 
             // criando a função pra cria comandos

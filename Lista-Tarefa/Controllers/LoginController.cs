@@ -33,14 +33,14 @@ namespace Lista_Tarefa.Controllers
         public async Task<IActionResult> Logar(string username, string senha, bool manterlogado)
         {
             //fazendo conexão com o mysql.                                    //passando o local.
-            MySqlConnection mySqlConnection = new MySqlConnection("Digite o local do BD");
+            MySqlConnection mySqlConnection = new MySqlConnection("");
             mySqlConnection.OpenAsync();
 
             // criando a função pra cria comandos
             MySqlCommand mySqlCommand = mySqlConnection.CreateCommand(); 
             mySqlCommand.CommandText = $"SELECT * FROM  usuarios WHERE username = '{username}' AND senha = '{senha}'"; //comando
 
-            MySqlDataReader reader =mySqlCommand.ExecuteReader(); //fazendo leitura na tabela.
+            MySqlDataReader reader = mySqlCommand.ExecuteReader(); //fazendo leitura na tabela.
 
           
                 if(await reader.ReadAsync()) //fazendo teste
@@ -54,7 +54,7 @@ namespace Lista_Tarefa.Controllers
                         new Claim(ClaimTypes.Name,nome)
                      }; 
 
-                    var identity = new ClaimsIdentity(direitosAcesso,"Identiry.Login");
+                    var identity = new ClaimsIdentity(direitosAcesso,"Identity.Login");
                     var userPrincial = new ClaimsPrincipal(new[] { identity });
 
                     await HttpContext.SignInAsync(userPrincial,
