@@ -8,53 +8,53 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ListaDeTarefas
 build_property.RootNamespace = ListaDeTarefas
-build_property.ProjectDir = C:\Users\Sindauto_Conecta\Desktop\ListaDeTarefas\ListaDeTarefas\
+build_property.ProjectDir = c:\Users\Sindauto_Conecta\Desktop\ListaDeTarefas\ListaDeTarefas\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Sindauto_Conecta\Desktop\ListaDeTarefas\ListaDeTarefas
+build_property.MSBuildProjectDirectory = c:\Users\Sindauto_Conecta\Desktop\ListaDeTarefas\ListaDeTarefas
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Home/Index.cshtml]
+[c:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Home/Privacy.cshtml]
+[c:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Shared/Error.cshtml]
+[c:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Tarefa/Apagarconfirmacao.cshtml]
+[c:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Tarefa/Apagarconfirmacao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWZhXEFwYWdhcmNvbmZpcm1hY2FvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Tarefa/Criar.cshtml]
+[c:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Tarefa/Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWZhXENyaWFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Tarefa/Editar.cshtml]
+[c:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Tarefa/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWZhXEVkaXRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Tarefa/Index.cshtml]
+[c:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Tarefa/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWZhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/_ViewImports.cshtml]
+[c:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/_ViewStart.cshtml]
+[c:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Shared/_Layout.cshtml]
+[c:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qjfd843zah
