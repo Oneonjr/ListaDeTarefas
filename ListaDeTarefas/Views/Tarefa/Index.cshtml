@@ -1,3 +1,4 @@
+@model List<TarefaModel>
 @{
     ViewData["Title"] = "Listagem de Tarefas";
 }
@@ -12,7 +13,7 @@
     <br>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role="button" asp-controller="Tarefa" asp-action="Criar">Adicionar Tarefas</a>
+        <a class="btn btn-outline-primary" role="button" asp-controller="Tarefa" asp-action="Criar">Adicionar Tarefas</a>
     </div>
     <br>
 
@@ -22,51 +23,29 @@
         <th scope="col">#</th>
         <th scope="col">Nome da Tarefa</th>
         <th scope="col">Descrição da Tarefa</th>
-        <th scope="col">Data de inicio</th>
-        
+        <th scope="col">Telefone</th>
         <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto@exemplo.com</td>
-        <td>71 99990000</td>
-        
-        <td>
-            <div class="btn-group" role="group">       
-                <a role="button" class="btn btn-warning" asp-controller="Tarefa" asp-action="Editar">Editar</a>
-                <a role="button" class="btn btn-danger" asp-controller="Tarefa" asp-action="Apagarconfirmacao">Apagar</a>
-            </div>
-        </td>
-        </tr>
-        <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton@exemplo.com</td>
-        <td>71 99990000</td>
-        
-        <td>
-            <div class="btn-group" role="group">       
-                <a role="button" class="btn btn-warning" asp-controller="Tarefa" asp-action="Editar">Editar</a>
-                <a role="button" class="btn btn-danger" asp-controller="Tarefa" asp-action="Apagarconfirmacao">Apagar</a>
-            </div>
-        </td>
-        </tr>
-            <tr>
-        <th scope="row">2</th>
-        <td>Larry</td>
-        <td>Thornton@exemplo.com</td>
-        <td>71 99990000</td>
-        
-        <td>
-            <div class="btn-group" role="group">       
-                <a role="button" class="btn btn-warning" asp-controller="Tarefa" asp-action="Editar">Editar</a>
-                <a role="button" class="btn btn-danger" asp-controller="Tarefa" asp-action="Apagarconfirmacao">Apagar</a>
-            </div>
-        </td>
-        </tr>
+        @if (Model != null && Model.Any())
+        {
+            @foreach (TarefaModel tarefa in Model)
+            {
+                <tr>
+                <th scope="row">@tarefa.Id</th>
+                <td>@tarefa.NomeTarefa</td>
+                <td>@tarefa.DescricaoTarefa</td>
+                <td>@tarefa.Tefefone</td>
+                <td>
+                    <div class="btn-group" role="group">       
+                        <a role="button" class="btn btn-outline-warning" asp-route-id="@tarefa.Id" asp-controller="Tarefa" asp-action="Editar">Editar</a>
+                        <a role="button" class="btn btn-outline-danger" asp-route-id="@tarefa.Id" asp-controller="Tarefa" asp-action="Apagarconfirmacao">Apagar</a>
+                    </div>
+                </td>
+                </tr>
+            }
+        }
     </tbody>
     </table>
 </div>

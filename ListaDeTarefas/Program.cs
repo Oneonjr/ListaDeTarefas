@@ -1,17 +1,23 @@
 using ListaDeTarefas.Data;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql;
+using Repositorio;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var connectionStringMysql = builder.Configuration.GetConnectionString("ConexaoPadrao");
+builder.Services.AddDbContext<BancoContext>(options => 
+    options.UseMySql(connectionStringMysql,ServerVersion.Parse("8.0.31 MySQL"))); //utilizando MySql
+
+builder.Services.AddScoped<ItarefaRepositorio, TarefaRepositorio>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-var ConnectionStringMysql = builder.Configuration.GetConnectionString("BancoDados");
-builder.Services.AddDbContext<BancoContext>(o =>
-    o.UseMySql(ConnectionStringMysql,ServerVersion.Parse("8.0.31")));
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

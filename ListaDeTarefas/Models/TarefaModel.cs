@@ -12,8 +12,9 @@ namespace ListaDeTarefas.Models
         public string NomeTarefa { get; set; }
         public string DescricaoTarefa { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime DataInicio { get; set; }
+        // [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        // public DateTime DataCriação { get; set; }
+        public string Tefefone { get; set; }
         
     }
 }

@@ -1,3 +1,4 @@
+@model TarefaModel
 @{
     ViewData["Title"] = "Criando Tarefas";
 }
@@ -10,20 +11,20 @@
     
 </div>
 
-<form>
+<form asp-controller="Tarefa" asp-action="Criar" method="post">
   <div class="form-group">
     <label for="nome">Nome</label>
-    <input type="text" class="form-control"  placeholder="Digite o nome da tarefa">
+    <input type="text" asp-for="NomeTarefa" class="form-control"  placeholder="Digite o nome da tarefa">
   </div>
     <div class="form-group">
     <label for="email">E-mail</label>
-    <input type="text" class="form-control"  placeholder="Digite email da tarefa">
+    <input type="text" asp-for="DescricaoTarefa" class="form-control"  placeholder="Digite email da tarefa">
   </div>
-  <div class="form-group">
+   <div class="form-group">
     <label for="telefone">Telefone</label>
-    <input type="text" class="form-control"  placeholder="Digite o telefone da tarefa">
-  </div>    
+    <input type="text" asp-for="Tefefone" class="form-control"  placeholder="Digite o telefone da tarefa">
+  </div>     
     <br>
-  <button type="button" class="btn btn-primary btn-block" >Adicionar</button>
+  <button type="submit" class="btn btn-primary btn-block" >Adicionar</button>
   <a class="btn btn-secondary " asp-controller="Tarefa" asp-action="Index" role="button" >Voltar</a>
 </form>
