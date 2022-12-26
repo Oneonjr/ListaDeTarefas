@@ -31,9 +31,10 @@ namespace ListaDeTarefas.Controllers
             return View();
         }
 
-        public IActionResult Editar()
+        public IActionResult Editar(int id)
         {
-            return View();
+           TarefaModel tarefa = _tarefaRepositorio.ListarPorId(id);
+            return View(tarefa);
         }
 
         public IActionResult Apagarconfirmacao()
@@ -44,7 +45,19 @@ namespace ListaDeTarefas.Controllers
         [HttpPost]
         public IActionResult Criar(TarefaModel tarefa)
         {
-            _tarefaRepositorio.Adicionar(tarefa);
+            if(ModelState.IsValid)
+            {
+                _tarefaRepositorio.Adicionar(tarefa);
+                return RedirectToAction("Index");
+            }
+            
+            return View(tarefa);
+        }
+
+        [HttpPost]
+        public IActionResult Alterar(TarefaModel tarefa)
+        {
+            _tarefaRepositorio.Alterar(tarefa);
             return RedirectToAction("Index");
         }
 

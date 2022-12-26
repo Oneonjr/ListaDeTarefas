@@ -16,7 +16,10 @@ namespace Repositorio
         {
             _BancoContext = bancoContext;
         }
-
+        public TarefaModel ListarPorId(int id)
+        {
+            return _BancoContext.Tarefas.FirstOrDefault(x => x.Id == id);
+        }
         public List<TarefaModel> BuscarTodas()
         {
             return _BancoContext.Tarefas.ToList();
@@ -29,6 +32,20 @@ namespace Repositorio
             return tarefa;
         }
 
+        public TarefaModel Alterar(TarefaModel tarefa)
+        {
+            TarefaModel tarefaDB = ListarPorId(tarefa.Id);
 
+            if(tarefaDB == null) throw new System.Exception("Houve um erro ao Alterar");
+
+            tarefaDB.NomeTarefa = tarefa.NomeTarefa;
+            tarefaDB.DescricaoTarefa = tarefa.DescricaoTarefa;
+            tarefaDB.Tefefone = tarefa.Tefefone;
+
+            _BancoContext.Tarefas.Update(tarefaDB);
+            _BancoContext.SaveChanges();
+
+            return tarefaDB;
+        }
     }
 }
