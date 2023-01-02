@@ -12,5 +12,6 @@ namespace Repositorio
         List<TarefaModel> BuscarTodas();
         TarefaModel Adicionar(TarefaModel tarefa);
         TarefaModel Alterar(TarefaModel tarefa);
+        bool Apagar(int id);
     }
 }

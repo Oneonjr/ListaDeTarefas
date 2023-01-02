@@ -47,5 +47,17 @@ namespace Repositorio
 
             return tarefaDB;
         }
+
+        public bool Apagar(int id)
+        {
+            TarefaModel tarefaDB = ListarPorId(id);
+
+            if(tarefaDB == null) throw new System.Exception("Houve um erro ao Apagar a tarefa");
+
+            _BancoContext.Tarefas.Remove(tarefaDB);
+            _BancoContext.SaveChanges();
+
+            return true;
+        }
     }
 }

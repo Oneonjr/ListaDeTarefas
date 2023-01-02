@@ -37,28 +37,76 @@ namespace ListaDeTarefas.Controllers
             return View(tarefa);
         }
 
-        public IActionResult Apagarconfirmacao()
+        public IActionResult Apagarconfirmacao(int id)
         {
-            return View();
+            TarefaModel tarefa = _tarefaRepositorio.ListarPorId(id);
+            return View(tarefa);
+        }
+
+        public IActionResult Apagar(int id)
+        {
+           try
+           {
+                bool apagado = _tarefaRepositorio.Apagar(id);
+                if (apagado)
+                {
+                    TempData["MensagemSucesso"] = "Tarefa Apagada com sucesso";
+                }
+                else 
+                {
+                    TempData["MensagemErro"] = $"Não conseguimos Apagar sua Tarefa.";
+                }
+                return RedirectToAction("Index");
+           }
+           catch (System.Exception erro)
+           {
+             TempData["MensagemErro"] = $"Não conseguimos Apagar sua Tarefa, Erro: {erro.Message}";
+             return RedirectToAction("Index");
+           }
         }
         
         [HttpPost]
         public IActionResult Criar(TarefaModel tarefa)
         {
-            if(ModelState.IsValid)
+            try
             {
-                _tarefaRepositorio.Adicionar(tarefa);
+                    if(ModelState.IsValid)
+                {
+                    _tarefaRepositorio.Adicionar(tarefa);
+                    TempData["MensagemSucesso"] = "Tarefa cadastrada com sucesso"; 
+                    return RedirectToAction("Index");
+                }
+                
+                return View(tarefa);
+            }
+            catch (System.Exception erro)
+            {
+                
+                TempData["MensagemErro"] = $"Não conseguimos cadastrar sua Tarefa, Tente novamente, Erro: {erro.Message}"; 
                 return RedirectToAction("Index");
             }
-            
-            return View(tarefa);
         }
 
         [HttpPost]
         public IActionResult Alterar(TarefaModel tarefa)
         {
-            _tarefaRepositorio.Alterar(tarefa);
-            return RedirectToAction("Index");
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _tarefaRepositorio.Alterar(tarefa);
+                    TempData["MensagemSucesso"] = "Tarefa alterada com sucesso";
+                    return RedirectToAction("Index");
+                }
+
+                return View("Editar", tarefa);
+
+            }
+            catch (System.Exception erro)
+            {
+                TempData["MensagemErro"] = $"Não conseguimos Alterar sua Tarefa, Tente novamente, Erro: {erro.Message}"; 
+                return RedirectToAction("Index");
+            }
         }
 
     }
