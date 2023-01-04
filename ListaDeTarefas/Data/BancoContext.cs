@@ -14,5 +14,6 @@ namespace ListaDeTarefas.Data
         }
 
         public DbSet<TarefaModel> Tarefas {get; set;}
+        public DbSet<UsuarioModel> Usuarios {get; set; }
     }
 }

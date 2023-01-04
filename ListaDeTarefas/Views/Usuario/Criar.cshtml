@@ -1,0 +1,50 @@
+@using ListaDeTarefas.Enums
+@model UsuarioModel
+@{
+    ViewData["Title"] = "Criar Usuário";
+}
+
+
+
+<div  class="text-center">
+    
+    <h1 class="display-4">Criar Usuário</h1>
+    
+</div>
+
+<form asp-controller="Usuario" asp-action="Criar" method="post">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" asp-for="Nome" class="form-control"  placeholder="Digite o nome do Usuario">
+    @Html.ValidationMessageFor(x => x.Nome)
+  </div>
+    <div class="form-group">
+    <label for="email">E-mail</label>
+    <input type="text" asp-for="Email" class="form-control"  placeholder="Digite email da tarefa">
+    @Html.ValidationMessageFor(x => x.Email)
+  </div>
+   <div class="form-group">
+    <label for="telefone">Login</label>
+    <input type="text" asp-for="Login" class="form-control"  placeholder="Digite o login da Usuario">
+    @Html.ValidationMessageFor(x => x.Login)
+  </div>
+
+  <div class="form-group">
+    <label for="nome">Perfil</label>
+    <Select asp-for="Perfil" class="form-control">
+      <option value="0">Selecione</option>
+      <option value="@PerfilEnum.Admin">Administrador</option>
+      <option value="@PerfilEnum.Padrao">Padrão</option>
+    </Select>
+  </div>
+
+  <div class="form-group">
+    <label for="nome">Senha</label>
+    <input type="password" asp-for="Senha" class="form-control"  placeholder="Digite a senha da Usuario">
+    @Html.ValidationMessageFor(x => x.Senha)
+  </div>
+
+    <br>
+  <button type="submit" class="btn btn-primary btn-block" >Adicionar</button>
+  <a class="btn btn-secondary " asp-controller="Tarefa" asp-action="Index" role="button" >Voltar</a>
+</form>

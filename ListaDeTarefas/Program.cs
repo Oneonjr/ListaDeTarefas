@@ -1,4 +1,5 @@
 using ListaDeTarefas.Data;
+using ListaDeTarefas.Repositorio;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql;
 using Repositorio;
@@ -11,6 +12,8 @@ builder.Services.AddDbContext<BancoContext>(options =>
     options.UseMySql(connectionStringMysql,ServerVersion.Parse("8.0.31 MySQL"))); //utilizando MySql
 
 builder.Services.AddScoped<ItarefaRepositorio, TarefaRepositorio>();
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+
 
 builder.Services.AddControllersWithViews();
 
