@@ -23,8 +23,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Shared/_LayoutDeslogado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREZXNsb2dhZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Shared/_ValidationScriptsPartial.cshtml]
@@ -47,12 +55,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWZhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Usuario/Apagarconfirmacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBcGFnYXJjb25maXJtYWNhby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Usuario/Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmlhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Usuario/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Usuario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/_ViewImports.cshtml]

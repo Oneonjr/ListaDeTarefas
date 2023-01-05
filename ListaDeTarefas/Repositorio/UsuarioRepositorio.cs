@@ -16,6 +16,12 @@ namespace Repositorio
         {
             _BancoContext = bancoContext;
         }
+
+        public UsuarioModel BuscarPorLogin(string login)
+        {
+            return _BancoContext.Usuarios.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper());
+        }
+
         public UsuarioModel ListarPorId(int id)
         {
             return _BancoContext.Usuarios.FirstOrDefault(x => x.Id == id);
@@ -61,5 +67,7 @@ namespace Repositorio
 
             return true;
         }
+
+
     }
 }

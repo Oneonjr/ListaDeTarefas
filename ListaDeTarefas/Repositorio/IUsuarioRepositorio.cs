@@ -8,6 +8,7 @@ namespace ListaDeTarefas.Repositorio
 {
     public interface IUsuarioRepositorio
     {
+        UsuarioModel BuscarPorLogin(string login);
         UsuarioModel ListarPorId(int id);
         List<UsuarioModel> BuscarTodas();
         UsuarioModel Adicionar(UsuarioModel usuario);
