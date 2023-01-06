@@ -7,6 +7,7 @@ using ListaDeTarefas.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ListaDeTarefas.Repositorio;
+using ListaDeTarefas.Helper;
 
 namespace ListaDeTarefas.Controllers
 {
@@ -14,13 +15,30 @@ namespace ListaDeTarefas.Controllers
     public class LoginController : Controller
     {   
         private readonly IUsuarioRepositorio  _usuarioRepositorio;
-        public LoginController(IUsuarioRepositorio usuarioRepositorio)
+        private readonly ISessao _sessao;
+        public LoginController(IUsuarioRepositorio usuarioRepositorio,
+                                 ISessao sessao)
         {
             _usuarioRepositorio = usuarioRepositorio;
+            _sessao = sessao;
         }
         public IActionResult Index()
         {
+            // Se o usuario estiver logado ir para home.
+
+            if (_sessao.BuscarSessaoUsuario() != null )
+            {
+                return RedirectToAction("Index","Home");
+            }
+
             return View();
+        }
+
+        public IActionResult Sair()
+        {
+            _sessao.RemoverSessaoUsuario();
+
+            return RedirectToAction("Index","Login");
         }
 
         [HttpPost]
@@ -30,14 +48,17 @@ namespace ListaDeTarefas.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    UsuarioModel usuario2 = _usuarioRepositorio.BuscarPorLogin(loginModel.Login); // validação de login
+                    UsuarioModel usuario = _usuarioRepositorio.BuscarPorLogin(loginModel.Login); // validação de login
 
-                    if (usuario2 != null)
+                    if (usuario != null)
                     {
-                        if (usuario2.SenhaValida(loginModel.Senha)) //validação senha
+                        if (usuario.SenhaValida(loginModel.Senha)) //validação senha
                         {
+                            _sessao.CriarSessaoUsuario(usuario);
                             return RedirectToAction("Index","Home"); 
                         } 
+
+
 
                        TempData["MensagemErro"] =$"Senha do Usuario é invalida.Tente novamente.";
                            

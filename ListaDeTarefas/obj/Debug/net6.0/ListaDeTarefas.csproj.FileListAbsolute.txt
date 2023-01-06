@@ -47,3 +47,4 @@ C:\Users\Sindauto_Conecta\Desktop\ListaDeTarefas\ListaDeTarefas\bin\Debug\net6.0
 C:\Users\Sindauto_Conecta\Desktop\ListaDeTarefas\ListaDeTarefas\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\Sindauto_Conecta\Desktop\ListaDeTarefas\ListaDeTarefas\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Sindauto_Conecta\Desktop\ListaDeTarefas\ListaDeTarefas\obj\Debug\net6.0\ListaDeTarefas.csproj.CopyComplete
+C:\Users\Sindauto_Conecta\Desktop\ListaDeTarefas\ListaDeTarefas\bin\Debug\net6.0\Newtonsoft.Json.dll

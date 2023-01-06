@@ -11,6 +11,7 @@
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Microsoft.EntityFrameworkCore.Design": "7.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.1",
+          "Newtonsoft.Json": "13.0.2",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0-silver.1"
         },
         "runtime": {
@@ -212,6 +213,14 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.2": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.2.27524"
+          }
+        }
+      },
       "Pomelo.EntityFrameworkCore.MySql/7.0.0-silver.1": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "7.0.1",
@@ -404,6 +413,13 @@
       "sha512": "sha512-rhy856Z1LrSblkC//OkvLIXBuiLhwlBAwDBrdHJEkIhu3eZRCQQg9sDNpt7eEVXtIFAMyEXkaky0bYpoGKps3g==",
       "path": "mysqlconnector/2.2.2",
       "hashPath": "mysqlconnector.2.2.2.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
+      "path": "newtonsoft.json/13.0.2",
+      "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
     },
     "Pomelo.EntityFrameworkCore.MySql/7.0.0-silver.1": {
       "type": "package",

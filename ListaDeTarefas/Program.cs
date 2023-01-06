@@ -1,4 +1,5 @@
 using ListaDeTarefas.Data;
+using ListaDeTarefas.Helper;
 using ListaDeTarefas.Repositorio;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql;
@@ -11,9 +12,16 @@ var connectionStringMysql = builder.Configuration.GetConnectionString("ConexaoPa
 builder.Services.AddDbContext<BancoContext>(options => 
     options.UseMySql(connectionStringMysql,ServerVersion.Parse("8.0.31 MySQL"))); //utilizando MySql
 
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<ItarefaRepositorio, TarefaRepositorio>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<ISessao, Sessao>();
 
+builder.Services.AddSession(o => 
+{
+    o.Cookie.HttpOnly = true;
+    o.Cookie.IsEssential = true;
+});
 
 builder.Services.AddControllersWithViews();
 
@@ -36,6 +44,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
