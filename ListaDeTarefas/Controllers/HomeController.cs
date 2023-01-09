@@ -1,12 +1,13 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ListaDeTarefas.Models;
+using ListaDeTarefas.Filter;
 
 namespace ListaDeTarefas.Controllers;
 
 public class HomeController : Controller
 {
-
+    [PaginaUsuarioLogado]
     public IActionResult Index()
     {
         return View();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using ListaDeTarefas.Filter;
 using ListaDeTarefas.Models;
 using ListaDeTarefas.Repositorio;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.Logging;
 namespace ListaDeTarefas.Controllers
 {
     //[Route("[controller]")]
+    [PaginaRestritaSoAdmin]
     public class UsuarioController : Controller
     {
         

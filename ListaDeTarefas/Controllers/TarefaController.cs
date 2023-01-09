@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using ListaDeTarefas.Filter;
 using ListaDeTarefas.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -11,6 +12,7 @@ using Repositorio;
 namespace ListaDeTarefas.Controllers
 {
     // [Route("[Tarefas]")]
+    [PaginaUsuarioLogado]
     public class TarefaController : Controller
     {
         private readonly ItarefaRepositorio _tarefaRepositorio;
