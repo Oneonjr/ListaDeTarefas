@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ListaDeTarefas.Enums;
 using System.ComponentModel.DataAnnotations;
+using ListaDeTarefas.Helper;
 
 namespace ListaDeTarefas.Models
 {
@@ -25,7 +26,12 @@ namespace ListaDeTarefas.Models
         public DateTime? DataAtualizacao { get; set; }
          public bool SenhaValida(string senha)
          {
-             return Senha == senha;
+             return Senha == senha.GerarHash();
          } 
+        
+        public void SetSenhaHash()
+        {
+            Senha = Senha.GerarHash();
+        }
     }
 }

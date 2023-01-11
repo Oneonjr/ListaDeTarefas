@@ -33,6 +33,7 @@ namespace Repositorio
         public UsuarioModel Adicionar(UsuarioModel usuario)
         {
             usuario.DataCadastro = DateTime.Now;
+            usuario.SetSenhaHash();
             _BancoContext.Usuarios.Add(usuario);
             _BancoContext.SaveChanges();
 
