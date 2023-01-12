@@ -34,6 +34,11 @@ namespace ListaDeTarefas.Controllers
             return View();
         }
 
+        public IActionResult RedefinirSenha()
+        {
+            return View();
+        }
+
         public IActionResult Sair()
         {
             _sessao.RemoverSessaoUsuario();
@@ -73,6 +78,36 @@ namespace ListaDeTarefas.Controllers
             {
                 
                 TempData["MensagemErro"] = $"Não conseguimos Realizar seu login, Tente novamente"; 
+                return RedirectToAction("Index");
+            }
+        }
+
+        [HttpPost] 
+        public IActionResult EnviarLinkParaRedefinirSenha(RedefinirSenhaModel redefinirSenhaModel)
+        {
+             try
+            {
+                if (ModelState.IsValid)
+                {
+                    UsuarioModel usuario = _usuarioRepositorio.BuscarPorEmailELogin(redefinirSenhaModel.Email, redefinirSenhaModel.Login); // validação de login
+
+                    if (usuario != null)
+                    {
+                        string novaSenha = usuario.GerarNovaSenha();
+
+                        TempData["MensagemSucesso"] =$"Enviamos para seu E-mail cadastrado uma nova senha.";
+                        return RedirectToAction("Index","Login");
+                    }
+
+                    TempData["MensagemErro"] =$"Não conseguimos Redefinir sua senha. Por favor, tente novamente.";
+                }
+
+                return View("Index");
+            }
+            catch (System.Exception erro)
+            {
+                
+                TempData["MensagemErro"] = $"Não conseguimos Redefinir sua senha, Tente novamente, detalhe do erro:{erro.Message}"; 
                 return RedirectToAction("Index");
             }
         }

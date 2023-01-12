@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Sindauto_Conecta\Desktop\ListaDeTarefas\ListaDeTarefas
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/AlterarSenha/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx0ZXJhclNlbmhhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -25,6 +29,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Login/RedefinirSenha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVkZWZpbmlyU2VuaGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Sindauto_Conecta/Desktop/ListaDeTarefas/ListaDeTarefas/Views/Restrito/Index.cshtml]

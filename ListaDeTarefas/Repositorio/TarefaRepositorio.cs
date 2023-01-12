@@ -59,5 +59,10 @@ namespace Repositorio
 
             return true;
         }
+
+        public List<TarefaModel> BuscarTodas(int usuarioId)
+        {
+            return _BancoContext.Tarefas.Where(x => x.UsuarioId == usuarioId ).ToList();
+        }
     }
 }

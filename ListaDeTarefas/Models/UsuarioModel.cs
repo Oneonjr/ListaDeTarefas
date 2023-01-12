@@ -24,6 +24,7 @@ namespace ListaDeTarefas.Models
         public string Senha { get; set; }
         public DateTime DataCadastro { get; set; }
         public DateTime? DataAtualizacao { get; set; }
+        public virtual List<TarefaModel> Contatos { get; set;}
          public bool SenhaValida(string senha)
          {
              return Senha == senha.GerarHash();
@@ -32,6 +33,18 @@ namespace ListaDeTarefas.Models
         public void SetSenhaHash()
         {
             Senha = Senha.GerarHash();
+        }
+
+        public void SetNovaSenha(string novaSenha)
+        {
+            Senha = novaSenha.GerarHash();
+        }
+
+        public string GerarNovaSenha()
+        {
+            string novaSenha = Guid.NewGuid().ToString().Substring(0, 8);
+            Senha = novaSenha.GerarHash();
+            return novaSenha;
         }
     }
 }

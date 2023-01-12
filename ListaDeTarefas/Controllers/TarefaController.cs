@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using ListaDeTarefas.Filter;
+using ListaDeTarefas.Helper;
 using ListaDeTarefas.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -16,14 +17,18 @@ namespace ListaDeTarefas.Controllers
     public class TarefaController : Controller
     {
         private readonly ItarefaRepositorio _tarefaRepositorio;
+        private readonly ISessao _sessao;
 
-        public TarefaController(ItarefaRepositorio tarefaRepositorio)
+        public TarefaController(ItarefaRepositorio tarefaRepositorio,
+                                ISessao sessao)
         {
             _tarefaRepositorio = tarefaRepositorio;
+            _sessao = sessao;
         }
         public IActionResult Index()
         {
-            var tarefas = _tarefaRepositorio.BuscarTodas();
+            UsuarioModel usuarioLogado =  _sessao.BuscarSessaoUsuario();
+            var tarefas = _tarefaRepositorio.BuscarTodas(usuarioLogado.Id);
             
             return View(tarefas);
         }
@@ -72,9 +77,13 @@ namespace ListaDeTarefas.Controllers
         {
             try
             {
-                    if(ModelState.IsValid)
+                
+                if(ModelState.IsValid)
                 {
-                    _tarefaRepositorio.Adicionar(tarefa);
+                    UsuarioModel usuarioLogado =  _sessao.BuscarSessaoUsuario();
+                    tarefa.UsuarioId = usuarioLogado.Id;
+
+                    tarefa = _tarefaRepositorio.Adicionar(tarefa);
                     TempData["MensagemSucesso"] = "Tarefa cadastrada com sucesso"; 
                     return RedirectToAction("Index");
                 }
@@ -96,7 +105,10 @@ namespace ListaDeTarefas.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _tarefaRepositorio.Alterar(tarefa);
+                    UsuarioModel usuarioLogado =  _sessao.BuscarSessaoUsuario();
+                    tarefa.UsuarioId = usuarioLogado.Id;    
+
+                    tarefa = _tarefaRepositorio.Alterar(tarefa);
                     TempData["MensagemSucesso"] = "Tarefa alterada com sucesso";
                     return RedirectToAction("Index");
                 }

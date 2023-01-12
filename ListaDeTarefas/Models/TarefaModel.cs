@@ -20,6 +20,8 @@ namespace ListaDeTarefas.Models
         [Required(ErrorMessage = "Digite o telefone do contato")]
         [Phone(ErrorMessage = "O celular informado não é valido")]
         public string Tefefone { get; set; }
-        
+        public int? UsuarioId { get; set; }
+        public UsuarioModel Usuario { get; set; }
+
     }
 }
