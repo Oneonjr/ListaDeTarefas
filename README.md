@@ -1,6 +1,6 @@
 # Lista De Tarefas
 
-Projeto criado para aprender a integrar um **CRUD** com **usuarios** e **_Relação_** entre uma ou mais tabelas.
+Projeto criado para aprender a integrar um **CRUD** com sessão  de **usuarios** e **_Relação_** entre uma ou mais tabelas.
 
 O objetivo é criar uma lista de tarefas com status em que cada usuario com login e senha seja possivel acessar a suas tarefas.
 
